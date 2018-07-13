@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - 'node'
+
+cache:
+  yarn: true
+
+sudo: false
+
+os:
+  - linux
+
+before_script:
+  - yarn
+
+script:
+  - yarn lint
+  - yarn test

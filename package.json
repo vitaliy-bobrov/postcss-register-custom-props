@@ -1,0 +1,51 @@
+{
+  "name": "postcss-register-custom-props",
+  "version": "1.0.0",
+  "description": "PostCSS plugin that transforms custom property registration in CSS to JS",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint-ci *.js",
+    "test": "ava test.js"
+  },
+  "keywords": [
+    "PostCSS",
+    "plugin",
+    "Houdini",
+    "custom properties"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitaliy-bobrov/postcss-register-custom-props.git"
+  },
+  "author": "Vitaliy Bobrov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitaliy-bobrov/postcss-register-custom-props/issues"
+  },
+  "homepage": "https://github.com/vitaliy-bobrov/postcss-register-custom-props#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "postcss": "^6.0.22",
+    "prettier": "^1.13.5"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "eslint": "^5.1.0",
+    "eslint-ci": "^0.1.1",
+    "eslint-config-logux": "^23.0.0",
+    "eslint-config-postcss": "^3.0.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.17.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-standard": "^3.1.0"
+  },
+  "eslintConfig": {
+    "extends": "postcss",
+    "rules": {
+      "semi": 0
+    }
+  }
+}

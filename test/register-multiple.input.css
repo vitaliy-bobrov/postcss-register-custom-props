@@ -1,0 +1,16 @@
+@property --size {
+  syntax: '<length>';
+  initial-value: 0px;
+  inherits: false;
+}
+
+@property --interations-count {
+  syntax: '<integer>';
+  inherits: false;
+}
+
+@property --theme {
+  syntax: '<color>+';
+  initial-value: #fff;
+  inherits: true;
+}
