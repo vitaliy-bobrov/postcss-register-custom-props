@@ -34,7 +34,7 @@ function generateJSDefinitions (declarations) {
   return `if ('registerProperty' in CSS) {${ registrations }}`;
 }
 
-function validateProps(config, rule) {
+function validateProps (config, rule) {
   if (!config.name) {
     throw rule.error('Custom property name is required.');
   }
@@ -80,7 +80,7 @@ function processDefinition (atRule) {
 module.exports = postcss.plugin('postcss-register-custom-props', opts => {
   opts = opts ? Object.assign({}, DEFAULTS, opts) : DEFAULTS;
 
-  return (css, result) => {
+  return css => {
     const declarations = {};
 
     css.walkAtRules(atRule => {
