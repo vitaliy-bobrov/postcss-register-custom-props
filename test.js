@@ -10,7 +10,7 @@ function run (t, input, expectJS, opts) {
 
   return postcss([plugin(opts)]).process(input)
     .then(result => {
-      const outputJS = fs.readFileSync(opts.output, 'utf8');
+      let outputJS = fs.readFileSync(opts.output, 'utf8');
 
       t.is(outputJS, expectJS);
       t.is(result.warnings().length, 0);
@@ -18,8 +18,8 @@ function run (t, input, expectJS, opts) {
 }
 
 ava('should register color property', t => {
-  const inputCSS = fs.readFileSync('test/register.input.css', 'utf8');
-  const expectJS = fs.readFileSync('test/register.expect.js', 'utf8');
+  let inputCSS = fs.readFileSync('test/register.input.css', 'utf8');
+  let expectJS = fs.readFileSync('test/register.expect.js', 'utf8');
 
   return run(
     t,
@@ -30,8 +30,8 @@ ava('should register color property', t => {
 });
 
 ava('should register multiple properties', t => {
-  const inputCSS = fs.readFileSync('test/register-multiple.input.css', 'utf8');
-  const expectJS = fs.readFileSync('test/register-multiple.expect.js', 'utf8');
+  let inputCSS = fs.readFileSync('test/register-multiple.input.css', 'utf8');
+  let expectJS = fs.readFileSync('test/register-multiple.expect.js', 'utf8');
 
   return run(
     t,

@@ -14,10 +14,10 @@ function sanitizeValue (value) {
 }
 
 function configToRegister (config) {
-  const props = Object.keys(config)
+  let props = Object.keys(config)
     .map(prop => {
-      const isBoolProp = prop !== 'inherits';
-      const value = isBoolProp ? `'${ config[prop] }'` : config[prop];
+      let isBoolProp = prop !== 'inherits';
+      let value = isBoolProp ? `'${ config[prop] }'` : config[prop];
 
       return `${ prop }: ${ value }`;
     })
@@ -27,7 +27,7 @@ function configToRegister (config) {
 }
 
 function generateJSDefinitions (declarations) {
-  const registrations = Object.keys(declarations)
+  let registrations = Object.keys(declarations)
     .map(name => configToRegister(declarations[name]))
     .join('');
 
@@ -49,7 +49,7 @@ function validateProps (config, rule) {
 }
 
 function processDefinition (atRule) {
-  const config = {
+  let config = {
     name: atRule.params
   };
 
@@ -81,7 +81,7 @@ module.exports = postcss.plugin('postcss-register-custom-props', opts => {
   opts = opts ? Object.assign({}, DEFAULTS, opts) : DEFAULTS;
 
   return css => {
-    const declarations = {};
+    let declarations = {};
 
     css.walkAtRules(atRule => {
       if (atRule.name === AT_RULE) {
@@ -89,8 +89,8 @@ module.exports = postcss.plugin('postcss-register-custom-props', opts => {
       }
     });
 
-    const source = generateJSDefinitions(declarations);
-    const data = prettier.format(source, { parser: 'babylon' });
+    let source = generateJSDefinitions(declarations);
+    let data = prettier.format(source, { parser: 'babylon' });
 
     fs.writeFileSync(opts.output, data);
   };
