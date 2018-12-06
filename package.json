@@ -25,7 +25,6 @@
   "homepage": "https://github.com/vitaliy-bobrov/postcss-register-custom-props#readme",
   "dependencies": {
     "fs": "^0.0.1-security",
-    "postcss": "^7.0.6",
     "prettier": "^1.15.3"
   },
   "devDependencies": {
@@ -41,7 +40,11 @@
     "eslint-plugin-prefer-let": "^1.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "postcss": "^7.0.6"
+  },
+  "peerDependencies": {
+    "postcss": "^6.0.0"
   },
   "eslintConfig": {
     "extends": "postcss",
