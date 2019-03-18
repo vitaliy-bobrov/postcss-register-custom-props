@@ -90,7 +90,7 @@ module.exports = postcss.plugin('postcss-register-custom-props', opts => {
     });
 
     let source = generateJSDefinitions(declarations);
-    let data = prettier.format(source, { parser: 'babylon' });
+    let data = prettier.format(source, { parser: 'babel' });
 
     fs.writeFileSync(opts.output, data);
   };
