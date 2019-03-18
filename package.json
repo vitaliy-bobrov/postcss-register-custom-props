@@ -1,6 +1,6 @@
 {
   "name": "postcss-register-custom-props",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "PostCSS plugin that transforms custom property registration in CSS to JS",
   "main": "index.js",
   "scripts": {
