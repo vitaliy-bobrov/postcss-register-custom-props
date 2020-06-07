@@ -3,6 +3,6 @@ if ("registerProperty" in CSS) {
     name: "--highlight-color",
     syntax: "<color>",
     initialValue: "red",
-    inherits: true
+    inherits: true,
   });
 }
