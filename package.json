@@ -43,7 +43,7 @@
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "^20.1.0",
-    "postcss": "^7.0.14"
+    "postcss": "^8.2.10"
   },
   "peerDependencies": {
     "postcss": "^6.0.0"
